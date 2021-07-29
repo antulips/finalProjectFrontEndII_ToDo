@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+  <link rel="stylesheet" href="./styles/login.css">
+  <script src="./scripts/models/user_data.js"></script>
+  <script src="./scripts/services/requests_manager.js"></script>
+  <script src="./scripts/loaders.js"></script>
+  <script src="./scripts/script_signin.js"></script>
+</head>
+
+<body>
+  <form name="formLogin">
+    <h1>Nueva cuenta</h1>
+
+    <!-- <div class="image"></div> -->
+
+    <div class="errors">
+      <ul></ul>
+    </div>
+
+    <label>
+      Nombre:
+      <input type="text" name="name">
+    </label>
+    <label>
+      Apellido:
+      <input type="text" name="lastname">
+    </label>
+    <label>
+      Contraseña:
+      <input type="password" name="password" placeholder="Debe tener 8 caracteres, con una mayúscula y un número.">
+    </label>
+    <label>
+      Repetir contraseña:
+      <input type="password" name="repeatPassword">
+    </label>
+    <label>
+      Email:
+      <input type="text" name="email">
+    </label>
+
+    <button id="submit">Crear Cuenta</button>
+    <p>Si ya tienes una cuenta ingresa <a href="./login.html">aquí</a>.</p>
+
+    <div class="form-footer">
+      <p>ToDo</p>
+    </div>
+  </form>
+
+</body>
+
+</html>
