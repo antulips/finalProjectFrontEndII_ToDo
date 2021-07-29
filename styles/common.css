@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+@import url('animations.css');
+
+:root {
+  --primary: #7898FF;
+  --secondary: #8E64C5;
+  --app-grey: #F2F2F2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #F6F6F6;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  border-radius: 3px;
+}
+
+div.errors {
+  color: rgb(255, 43, 43);
+}
+
+.dark-mode-button {
+  color: rgb(134, 134, 134);
+  cursor: pointer;
+  font-size: 0.8em;
+  position: relative;
+  z-index: 2;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Dark Mode ---------------------------------------------------------------------------------------------- */
+.dark {
+  background-color: rgb(39, 39, 39);
+}
+
+.dark h2{ 
+  background-color: rgb(19, 19, 19);
+  color: rgb(170, 170, 170);
+  border-color: black;
+}
+
+.dark ul .description, .dark .new-task, .dark form input{
+  background-color: rgb(19, 19, 19);
+  border-color: black;
+}
+
+.dark .done-tasks .task .description {
+  background-color: rgb(49, 49, 49);
+}
+
+.dark .new-task button {
+  background-color:rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.dark div p, .dark form input, .dark .task .name {
+  color: rgb(230, 230, 230);
+}
+
+button img {
+  color: rgb(230, 230, 230);}
+
+

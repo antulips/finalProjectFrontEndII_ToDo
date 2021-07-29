@@ -1,0 +1,128 @@
+:root {
+    --primary-color: rgb(223, 223, 223);
+    --secondary-color: #d1cfcf;
+    --third: #7898FF;
+    --fourth: #8E64C5;
+    --app-grey: #f2f2f2;
+  }
+
+/* Loading tasks -------------------------------------------------------*/
+@keyframes down {
+    0% {
+        transform: translateY(-2em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.showing-tasks {
+    animation-name: down;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 300ms;
+}
+
+/* Placeholders -------------------------------------------------------*/
+@keyframes loadingTask {
+    0% {transform: scaleX(0);}
+    100% {transform: scaleX(1);}
+}
+
+@keyframes loadingContainerAnimation {
+  0% {
+  background: white;
+  }
+  50% {
+  background: rgb(182, 177, 177);
+  }
+  100% {
+  background: white;
+  }
+  }
+
+.skeleton-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+  }
+  
+.skeleton-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 1em 2em;
+  box-shadow: 2px 2px 5px lightgrey;
+  animation: loadingContainerAnimation 2s linear infinite;
+  
+  }
+
+.skeleton-text {
+    display: block;
+    height: 1em;
+    width: 25em;
+    background-color: var(--app-grey);
+    transform-origin: 0 0;
+    animation-name: loadingTask;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
+}
+ 
+.hidden {
+  display: none;
+}
+
+/* Spinner -------------------------------------------------------*/
+#charging-container {
+    background-color: #F6F6F6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+  }
+   
+  #charging {
+    border: 10px solid rgb(255, 255, 255);
+    border-top-color: var(--third);
+    border-bottom-color: var(--fourth);
+    border-top-style: dashed;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+   
+  /* Spinner Animations -------------------------------------------------------*/
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+   
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+  <link rel="stylesheet" href="./styles/tasks-list.css">
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./scripts/models/user_data.js"></script>
+  <script src="./scripts/services/requests_manager.js"></script>
+  <script src="./scripts/loaders.js"></script>
+  <script src="./scripts/darkMode.js"></script>
+  <script src="./scripts/script_tasks.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#">My ToDo's</a>
+    </nav>
+
+    <div class="user-info">
+      <p id="user-name"></p>
+      <!-- <div class="user-image"></div> -->
+      <div class="dark-mode-button" onclick="darkMode()">
+        <i class="far fa-lightbulb"></i>
+      </div>
+    </div>
+  </header>
+
+  <form id="addTask" class="new-task">
+    <div class="not-done"></div>
+    <input type="text" name="newTaskDescription" placeholder="Nueva tarea">
+    <button>
+      <img src="./assets/plus.png" alt="Agregar Tarea">
+    </button>
+  </form>
+
+  <ul class="not-done-tasks">
+
+  </ul>
+
+  <h2 class="done-title">Tareas terminadas</h2>
+  <ul class="done-tasks">
+
+  </ul>
+
+</body>
+
+</html>
