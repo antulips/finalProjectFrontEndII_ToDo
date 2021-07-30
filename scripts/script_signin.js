@@ -21,7 +21,11 @@ window.onload = () => {
         emailValidation(email) ? signinButton.disabled = false : signinButton.disabled = true;
     });
 
-    password.addEventListener('mouseout', () => {
+    password.addEventListener('keyup', () => {
+        passwordValidation(password, repeatPassword) ? signinButton.disabled = false : signinButton.disabled = true;
+    });
+
+    repeatPassword.addEventListener('keyup', () => {
         passwordValidation(password, repeatPassword) ? signinButton.disabled = false : signinButton.disabled = true;
     });
 
