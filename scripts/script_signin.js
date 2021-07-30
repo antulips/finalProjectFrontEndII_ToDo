@@ -64,14 +64,14 @@ function emailValidation(email) {
 }
 
 function passwordValidation(password, repeatPassword) {
-    const expression = /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]))\S$/;
+    const expression = /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{8,})\S$/;
     const test = expression.test(password.value);
     const coincidence = password.value == repeatPassword.value;
-    const validLength = password.value.length > 7;
 
-    !(test && coincidence && validLength) ? password.classList.add("error") : password.classList.remove("error");
+    !test ? password.classList.add("error") : password.classList.remove("error");
+    !coincidence ? repeatPassword.classList.add("error") : repeatPassword.classList.remove("error");
 
-    return test;
+    return test && coincidence;
 }
 
 //USUARIOS CREADOS PARA VERSIÓN FINAL
