@@ -14,8 +14,8 @@ window.onload = () => {
 
         RequestManager.post('/users/login', body).then(data => {
             localStorage.setItem('token', data.jwt)
-            hideSpinner();
             location.href = './tasks-list.html';
+            hideSpinner();
         }).catch(err => {
             console.log(err);
             hideSpinner();
