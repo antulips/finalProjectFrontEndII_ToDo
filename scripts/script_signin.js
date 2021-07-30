@@ -49,6 +49,16 @@ window.onload = () => {
     });
 }
 
+verifyToken();
+
+function verifyToken() {
+    const token = RequestManager.getToken();
+
+    if (token) {
+        location.href = './tasks-list.html';
+    }
+}
+
 function nameValidation(field) {
     const expression = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/;
     const test = expression.test(field.value);
